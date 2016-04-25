@@ -1,5 +1,5 @@
-#from get_mnist_data_tf import read_data_sets
-#mnist = read_data_sets("MNIST_data/", one_hot=True)
+from get_mnist_data_tf import read_data_sets
+mnist = read_data_sets("MNIST_data/", one_hot=True)
 import tensorflow as tf
 sess = tf.InteractiveSession()
 x = tf.placeholder("float", shape=[None, 12])
@@ -16,13 +16,6 @@ nmist2 = numpy.genfromtxt('input2.csv', delimiter=',')
 print(nmist2.shape)
 
 
-mnist=[]
-mnist.train.images=nmist2[50:][1:13]
-mnist.train.labels=nmist2[50:][15:]
-mnist.test.images=nmist2[25:50][1:13]
-mnist.test.labels=nmist2[25:50][15:]
-mnist.validation.images=nmist2[:25][1:13]
-mnist.validation.images=nmist2[:25][15:]
  
 
 for i in range(1000):
@@ -53,7 +46,7 @@ def max_pool_2x2(x):
 W_conv1 = weight_variable([5, 5, 1, 32])
 b_conv1 = bias_variable([32])
 
-x_image = tf.reshape(x, [-1,28,28,1])
+#x_image = tf.reshape(x, [-1,28,28,1])
 
 h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
 h_pool1 = max_pool_2x2(h_conv1)
