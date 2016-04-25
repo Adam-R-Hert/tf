@@ -7,7 +7,6 @@ import numpy
 nmist2 = numpy.genfromtxt('input2.csv', delimiter=',')
 print(nmist2.shape)
 
-nmist2 = nmist2.T
 
 
 
@@ -86,7 +85,7 @@ def read_data_sets(train_dir, fake_data=False, one_hot=False):
     VALIDATION_SIZE = 25
     
     train_images = nmist2[:][1:13]
-    print(train_images.shape)
+    print(train_images.shape[0])
     train_labels = nmist2[:][15:]
    
     test_images = nmist2[25:50][1:13]
