@@ -85,7 +85,7 @@ def read_data_sets(train_dir, fake_data=False, one_hot=False):
     
     VALIDATION_SIZE = 25
     
-    train_images = nmist2[1:13][2:]
+    train_images = nmist2[:][:]
     print(train_images.shape)
     train_labels = nmist2[15:][2:]
    
