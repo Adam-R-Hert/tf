@@ -84,7 +84,7 @@ def read_data_sets(train_dir, fake_data=False, one_hot=False):
         return data_sets
     
     VALIDATION_SIZE = 25
-    local_file = maybe_download(TRAIN_IMAGES, train_dir)
+    
     train_images = nmist2[50:][1:13]
     
     train_labels = nmist2[50:][15:]
