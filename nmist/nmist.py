@@ -19,7 +19,7 @@ print(nmist2.shape)
  
 
 for i in range(1000):
-  batch = mnist.train.next_batch(50)
+  batch = mnist.train.next_batch(32)
   train_step.run(feed_dict={x: batch[0], y_: batch[1]})
 correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
