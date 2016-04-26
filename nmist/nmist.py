@@ -70,7 +70,7 @@ keep_prob = tf.placeholder("float")
 h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)
 
 W_fc2 = weight_variable([1024, 41])
-b_fc2 = bias_variable([59])
+b_fc2 = bias_variable([41])
 
 
 
