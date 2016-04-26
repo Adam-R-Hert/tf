@@ -88,9 +88,9 @@ def read_data_sets(train_dir, fake_data=False, one_hot=False):
     print(train_images.shape[0])
     train_labels = nmist2[:,15:]
    
-    test_images = nmist2[[25:50],[1:13]]
+    test_images = nmist2[25:50,1:13]
     
-    test_labels = nmist2[25:50][15:]
+    test_labels = nmist2[25:50,15:]
     validation_images = train_images[:VALIDATION_SIZE]
     validation_labels = train_labels[:VALIDATION_SIZE]
     train_images = train_images[VALIDATION_SIZE:]
